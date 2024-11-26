@@ -1,0 +1,11 @@
+R_DEF: Internal format may change without notice
+local
+id btn_next
+id btn_play_pause
+id btn_previous
+id song_artist
+id song_title
+layout activity_main
+mipmap ic_launcher
+string app_name
+style Theme.Music_player
