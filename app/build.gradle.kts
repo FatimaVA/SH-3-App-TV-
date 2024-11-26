@@ -42,7 +42,7 @@ android {
         compose = true
     }
     composeOptions {
-        kotlinCompilerExtensionVersion = "1.5.1"
+        kotlinCompilerExtensionVersion = "1.5.3"
     }
     packaging {
         resources {
@@ -65,8 +65,8 @@ dependencies {
     implementation("androidx.compose.ui:ui-tooling-preview:1.5.1")
 
     // Android TV libraries
-    implementation("androidx.tv:tv-foundation:1.0.0")
-    implementation("androidx.tv:tv-material:1.0.0")
+    implementation ("androidx.tv:tv-foundation:1.0.0-alpha11")
+    implementation ("androidx.tv:tv-material:1.0.0")
 
     // Lifecycle & Activity Compose
     implementation("androidx.lifecycle:lifecycle-runtime-ktx:2.6.2")

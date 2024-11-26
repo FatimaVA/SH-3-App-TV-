@@ -1,0 +1,64 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#000000">
+
+    <!-- Título de la canción -->
+    <TextView
+        android:id="@+id/song_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:text="Canción"
+        android:textColor="#FFFFFF"
+        android:textSize="24sp"
+        android:layout_marginTop="50dp" />
+
+    <!-- Artista -->
+    <TextView
+        android:id="@+id/song_artist"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/song_title"
+        android:layout_centerHorizontal="true"
+        android:text="Artista"
+        android:textColor="#AAAAAA"
+        android:textSize="18sp"
+        android:layout_marginTop="10dp" />
+
+    <!-- Botón de Anterior -->
+    <Button
+        android:id="@+id/btn_previous"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_centerVertical="true"
+        android:text="⏮"
+        android:background="@android:color/transparent"
+        android:textSize="24sp"
+        android:textColor="#FFFFFF" />
+
+    <!-- Botón de Reproducir/Pausa -->
+    <Button
+        android:id="@+id/btn_play_pause"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:text="⏯"
+        android:background="@android:color/transparent"
+        android:textSize="24sp"
+        android:textColor="#FFFFFF" />
+
+    <!-- Botón de Siguiente -->
+    <Button
+        android:id="@+id/btn_next"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:text="⏭"
+        android:background="@android:color/transparent"
+        android:textSize="24sp"
+        android:textColor="#FFFFFF" />
+
+</RelativeLayout>

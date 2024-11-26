@@ -1,0 +1,26 @@
+[
+    {
+        "merged": "com.example.tvplayer.app-debug-58:/mipmap-mdpi_ic_launcher.webp.flat",
+        "source": "com.example.tvplayer.app-main-60:/mipmap-mdpi/ic_launcher.webp"
+    },
+    {
+        "merged": "com.example.tvplayer.app-debug-58:/mipmap-hdpi_ic_launcher.webp.flat",
+        "source": "com.example.tvplayer.app-main-60:/mipmap-hdpi/ic_launcher.webp"
+    },
+    {
+        "merged": "com.example.tvplayer.app-debug-58:/mipmap-xxxhdpi_ic_launcher.webp.flat",
+        "source": "com.example.tvplayer.app-main-60:/mipmap-xxxhdpi/ic_launcher.webp"
+    },
+    {
+        "merged": "com.example.tvplayer.app-debug-58:/layout_activity_main.xml.flat",
+        "source": "com.example.tvplayer.app-main-60:/layout/activity_main.xml"
+    },
+    {
+        "merged": "com.example.tvplayer.app-debug-58:/mipmap-xxhdpi_ic_launcher.webp.flat",
+        "source": "com.example.tvplayer.app-main-60:/mipmap-xxhdpi/ic_launcher.webp"
+    },
+    {
+        "merged": "com.example.tvplayer.app-debug-58:/mipmap-xhdpi_ic_launcher.webp.flat",
+        "source": "com.example.tvplayer.app-main-60:/mipmap-xhdpi/ic_launcher.webp"
+    }
+]
