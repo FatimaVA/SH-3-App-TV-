@@ -15,18 +15,18 @@
         android:layout_marginTop="50dp" />
 
     <!-- Artista -->
-    <TextView
-        android:id="@+id/song_artist"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/song_title"
-        android:layout_centerHorizontal="true"
-        android:text="Artista"
-        android:textColor="#AAAAAA"
-        android:textSize="18sp"
-        android:layout_marginTop="10dp" />
+    <!-- <TextView
+         android:id="@+id/song_artist"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:layout_below="@id/song_title"
+         android:layout_centerHorizontal="true"
+         android:text="Artista"
+         android:textColor="#AAAAAA"
+         android:textSize="18sp"
+         android:layout_marginTop="10dp" />-->
 
-    <!-- Botón de Anterior -->
+     <!-- Botón de Anterior -->
     <Button
         android:id="@+id/btn_previous"
         android:layout_width="wrap_content"
