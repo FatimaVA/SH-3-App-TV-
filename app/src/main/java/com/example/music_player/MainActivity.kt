@@ -1,27 +1,27 @@
 package com.example.tvplayer
+
 import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.compose.foundation.layout.*
 import androidx.compose.material3.Button
-import androidx.compose.material3.Text
 import androidx.compose.material3.Card
-import androidx.compose.runtime.*
+import androidx.compose.material3.Text
+import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.dp
 import com.google.android.exoplayer2.ExoPlayer
 import com.google.android.exoplayer2.MediaItem
-import com.google.android.exoplayer2.MediaItem.Builder
 import com.google.android.exoplayer2.util.Util
 
 class MainActivity : ComponentActivity() {
     private lateinit var player: ExoPlayer
+
     private val songs = listOf(
-        "https://www.youtube.com/watch?v=WXzFCS72QIA",
-        "https://www.youtube.com/watch?v=WMl1xKJeuuQ",
-        "https://www.youtube.com/watch?v=LFMCfS-Jmj8"
+        R.raw.rosapastel,
+        R.raw.yoguapo
     )
     private var currentIndex = 0
 
@@ -31,29 +31,34 @@ class MainActivity : ComponentActivity() {
 
         player = ExoPlayer.Builder(this).build()
 
-
         playSong(songs[currentIndex])
-
 
         setContent {
             MusicPlayerUI(
                 onPlayPause = { togglePlayPause() },
                 onNext = { playNextSong() },
                 onPrevious = { playPreviousSong() },
-                currentSongTitle = "Song ${currentIndex + 1}",
-                currentArtist = "Artist ${currentIndex + 1}"
+                currentSongTitle = "Song ${currentIndex + 1}"
             )
         }
     }
-
-    private fun playSong(url: String) {
+    private fun playSong(songResId: Int) {
+        val uri = "android.resource://$packageName/$songResId"
         val mediaItem: MediaItem = MediaItem.Builder()
-            .setUri(url)
+            .setUri(uri)
             .build()
         player.setMediaItem(mediaItem)
         player.prepare()
         player.play()
     }
+    //private fun playSong(songResId: Int) {
+      //  val mediaItem: MediaItem = MediaItem.Builder()
+         //   .setUri(Util.getUriForResourceId(this, songResId))
+        //    .build()
+     //   player.setMediaItem(mediaItem)
+      //  player.prepare()
+      //  player.play()
+  //  }
 
     private fun togglePlayPause() {
         if (player.isPlaying) {
@@ -85,8 +90,7 @@ fun MusicPlayerUI(
     onPlayPause: () -> Unit,
     onNext: () -> Unit,
     onPrevious: () -> Unit,
-    currentSongTitle: String,
-    currentArtist: String
+    currentSongTitle: String
 ) {
     Column(
         modifier = Modifier
@@ -95,7 +99,6 @@ fun MusicPlayerUI(
         horizontalAlignment = Alignment.CenterHorizontally,
         verticalArrangement = Arrangement.Center
     ) {
-
         Card(
             modifier = Modifier
                 .fillMaxWidth()
@@ -109,7 +112,6 @@ fun MusicPlayerUI(
                 horizontalAlignment = Alignment.CenterHorizontally
             ) {
                 Text(text = "Song Title: $currentSongTitle")
-                Text(text = "Artist: $currentArtist")
             }
         }
 
@@ -130,6 +132,6 @@ fun MusicPlayerUI(
     }
 }
 
+// Función para agregar Card en Compose
 fun Card(modifier: Modifier, elevation: Dp, content: @Composable ColumnScope.() -> Unit) {
-
 }
